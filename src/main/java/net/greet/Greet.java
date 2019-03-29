@@ -1,6 +1,6 @@
 package net.greet;
 
-import java.sql.SQLOutput;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,16 +18,17 @@ public class Greet {
     String afrikGreet = "-----Haai-----";
     String tshwanaGreet = "-----Dumela-----";
 
-   // public Greet(String name, String lang){
+    /*public Greet(String name, String lang){
 
-     //   this.name = name;
-      //  this.lang = lang;
+        this.name = name;
+        this.lang = lang;
 
-    //}
+    }
+*/
 
-    ArrayList<String> usersList = new ArrayList<String>();
+    //ArrayList<String> usersList = new ArrayList<String>();
 
-    public String getName(){
+    public void getName(){
 
         Scanner input = new Scanner(System.in);
 
@@ -36,10 +37,12 @@ public class Greet {
 
 
 
-        usersList.add(name);
+       // usersList.add(name);
 
-        return name;
+
     }
+
+   
 
     public String getLang(){
 
@@ -57,17 +60,20 @@ public class Greet {
         }
         else if(lang.equalsIgnoreCase(afrStr)){
             countAfrikaans++;
+            System.out.println(afrikGreet + "\n");
             return afrikGreet;
 
         }
         else if(lang.equalsIgnoreCase(tshanaStr)){
+            System.out.println(tshwanaGreet + "\n");
             countTshwana++;
             return tshwanaGreet;
         }
         else {
 
-            return "Go back and enter one of the available language of your choice that is on a list";
+            System.out.println("Go back and enter one of the available language of your choice that is on a list");
         }
+        return null;
     }
 
 
@@ -77,7 +83,7 @@ public class Greet {
 
     }
 
-    public void greeted(){
+    /*public void greeted(){
 
         for( String greetedList: usersList ){
 
@@ -85,4 +91,6 @@ public class Greet {
         }
 
     }
+
+    */
 }
