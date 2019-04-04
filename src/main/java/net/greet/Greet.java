@@ -18,7 +18,11 @@ public class Greet {
 
     }
 
-    public Greet(String name, String lang) {
+    public void GreetM(String name, String lang) {
+
+        if(lang == null) {
+            lang = "Xhosa";
+        }
 
         this.name = name;
         this.lang = lang;
@@ -49,7 +53,7 @@ public class Greet {
     public void addUser() {
 
         Scanner input = new Scanner(System.in);
-
+        System.out.println(input.nextLine());
 
         while (true) {
 
@@ -61,7 +65,7 @@ public class Greet {
 
                 if (word[0].equalsIgnoreCase("greet")) {
                     Languages.valueOf(word[2]);
-
+                    System.out.println(word[1]);
                 }
 
             } catch (Exception e) {
