@@ -19,40 +19,7 @@ public class RunGreet {
         System.out.println(usersList);
         in.greet();
 
-
-
-
-
-
-
-
-
-
-
-
-                    /*int i = 0;
-
-                    while(i<2){
-                   Greet in = new Greet();
-                   in.getName();
-                   in.getLang();
-
-                   usersList.add(in);
-
-                   i++;
-
-                    in.greet();
-                    */
-
     }
-
-    //System.out.println(usersList);
-        /*for( Greet greetedList: usersList ){
-
-            System.out.println(greetedList.name + greetedList.lang);
-        }
-        */
-
 
 
 

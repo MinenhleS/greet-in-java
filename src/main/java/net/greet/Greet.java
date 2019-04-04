@@ -83,18 +83,18 @@ public class Greet{
 
             else if(langNumber.equalsIgnoreCase(zuluStr)){
                 countZulu ++;
-                System.out.println(zuluGreet + "\n");
+                System.out.println(zuluGreet + ""+ name +"\n");
 
 
             }
             else if(langNumber.equalsIgnoreCase(afrStr)){
                 countAfrikaans++;
-                System.out.println(afrikGreet + "\n");
+                System.out.println(afrikGreet + ""+ name +"\n");
 
 
             }
             else if(langNumber.equalsIgnoreCase(tsanaStr)){
-                System.out.println(tswanaGreet + "\n");
+                System.out.println(tswanaGreet + ""+ name + "\n");
                 countTswana++;
 
             }
@@ -126,7 +126,7 @@ public class Greet{
 
 
     public String greet(){
-        System.out.println("The name of the user is " + name + " and language of your choice is " + langNumber);
+        System.out.println(" " + name + " language of your choice is " + langNumber);
         return null;
 
     }
