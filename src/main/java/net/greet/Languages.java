@@ -3,13 +3,13 @@ package net.greet;
 public enum Languages {
 
 
-        isiZulu("Sawubona"),
+        IsiZulu("Sawubona"),
         Afrikaans("Haai"),
         Tswana("Dumela");
 
-         private String lang;
+          String lang;
 
-    private Languages(String lang){
+    Languages(String lang){
 
         this.lang = lang;
     }
