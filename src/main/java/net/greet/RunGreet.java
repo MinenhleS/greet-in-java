@@ -77,9 +77,9 @@ public class RunGreet {
                         }
                 }
 
-                else if(word[0].equalsIgnoreCase("help"){
+                else if(word[0].equalsIgnoreCase("help")){
 
-
+                    in.help();
             }
 
 

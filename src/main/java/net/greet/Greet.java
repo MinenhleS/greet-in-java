@@ -38,8 +38,6 @@ public class Greet {
             addUserMap.put(name, 0);
         }
 
-        // increment the counter for this type
-
         int userCounter = addUserMap.get(name);
         userCounter++;
         addUserMap.put(name, userCounter);
