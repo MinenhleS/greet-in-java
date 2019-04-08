@@ -17,7 +17,7 @@ public class Greet {
 
     }
 
-    Map< Languages, Integer> addUserMap = new HashMap< Languages, Integer>();
+    Map<String, Integer> addUserMap = new HashMap<String, Integer>();
 
     public void GreetM(String name, String lang) {
 
@@ -32,30 +32,41 @@ public class Greet {
 
     }
 
-    public void adding(Languages addUser){
+    public void adding(String name){
 
-        if (!addUserMap.containsKey(addUser)) {
-            addUserMap.put(addUser, 0);
+        if (!addUserMap.containsKey(name)) {
+            addUserMap.put(name, 0);
         }
 
         // increment the counter for this type
 
-        int userCounter = addUserMap.get(addUser);
+        int userCounter = addUserMap.get(name);
         userCounter++;
-        addUserMap.put(addUser, userCounter);
+        addUserMap.put(name, userCounter);
     }
 
-    public int totalUsers() {
+    public void counter(){
 
-        int totalAddedUser = 0;
+        System.out.println( addUserMap.size());
+    }
+    public void greeted(){
 
-        for (Integer userCount : addUserMap.values()) {
-            totalAddedUser += userCount;
-        }
+        System.out.println( addUserMap);
+    }
 
-        return totalAddedUser;
+
+    public void greetUsers(String name) {
+
+//        if (!addUserMap.containsKey(name)) {
+//            return addUserMap;
+//        }
+//            else
+        System.out.println(addUserMap.get(name) + name + "greeted");
 
     }
+
+
+
 
     public String getName() {
         return name;
