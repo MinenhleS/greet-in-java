@@ -1,7 +1,5 @@
 package net.greet;
 
-
-import org.junit.Assert;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -83,7 +81,7 @@ public class GreetingsTests {
 
 
     @Test
-    public void shouldClearUser(){
+    public void shouldClearUsers(){
 
         Greet in = new Greet();
         in.adding("Siya");
@@ -97,6 +95,33 @@ public class GreetingsTests {
         in.adding("Ngwenya");
         in.adding("mukela");
 
-        assertEquals(in.getLang() + ", " + in.getName(), "Sawubona, minenhle");
+        in.clear();
+
+        assertEquals(in.addUserMap.toString(),"{}");
+        assertEquals(in.addUserMap.size(), 0);
     }
+
+    @Test
+    public void shouldClearSpecificUser(){
+
+        Greet in = new Greet();
+
+        in.adding("Siya");
+        in.adding("Siya");
+        in.adding("dino");
+        in.adding("Siya");
+        in.adding("mukela");
+        in.adding("Siya");
+        in.adding("Siya");
+        in.adding("dino");
+        in.adding("Ngwenya");
+        in.adding("mukela");
+
+        in.clear("Siya");
+
+        assertEquals(in.addUserMap.toString(),"{mukela=2, Siya=0, dino=2, Ngwenya=1}");
+
+    }
+
+
 }

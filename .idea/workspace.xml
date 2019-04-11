@@ -42,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="171">
               <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -59,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="147">
               <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
               <folding>
                 <element signature="e#578#648#1" />
@@ -77,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetingsTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+            <state relative-caret-position="399">
+              <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -228,7 +228,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GreetingsTests.shouldReturnGreetingsWithDefaultLang">
+  <component name="RunManager" selected="JUnit.GreetingsTests.shouldClearSpecificUser">
+    <configuration name="GreetingsTests.shouldClearSpecificUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.GreetingsTests" />
+      <option name="METHOD_NAME" value="shouldClearSpecificUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetingsTests.shouldClearUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.GreetingsTests" />
+      <option name="METHOD_NAME" value="shouldClearUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GreetingsTests.shouldReturnCounter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
@@ -240,22 +272,6 @@
       <option name="PACKAGE_NAME" value="net.greet" />
       <option name="MAIN_CLASS_NAME" value="net.greet.GreetingsTests" />
       <option name="METHOD_NAME" value="shouldReturnCounter" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GreetingsTests.shouldReturnGreetedWithUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.GreetingsTests" />
-      <option name="METHOD_NAME" value="shouldReturnGreetedWithUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -293,29 +309,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreetingsTests.shouldReturnHowMuchUserIsGreeted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.GreetingsTests" />
-      <option name="METHOD_NAME" value="shouldReturnHowMuchUserIsGreeted" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GreetingsTests.shouldClearSpecificUser" />
+        <item itemvalue="JUnit.GreetingsTests.shouldClearUsers" />
         <item itemvalue="JUnit.GreetingsTests.shouldReturnGreetingsWithDefaultLang" />
         <item itemvalue="JUnit.GreetingsTests.shouldReturnGreetings" />
         <item itemvalue="JUnit.GreetingsTests.shouldReturnCounter" />
-        <item itemvalue="JUnit.GreetingsTests.shouldReturnHowMuchUserIsGreeted" />
-        <item itemvalue="JUnit.GreetingsTests.shouldReturnGreetedWithUserName" />
       </list>
     </recent_temporary>
   </component>
@@ -333,12 +333,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GreetingsTests_shouldReturnGreeted - 2019.04.11 at 11h 27m 33s.xml">
-      <configuration name="GreetingsTests.shouldReturnGreeted" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetingsTests_shouldReturnGreeted - 2019.04.11 at 11h 28m 26s.xml">
-      <configuration name="GreetingsTests.shouldReturnGreeted" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GreetingsTests_shouldReturnGreetedWithUserName - 2019.04.11 at 11h 55m 03s.xml">
       <configuration name="GreetingsTests.shouldReturnGreetedWithUserName" configurationId="JUnit" />
     </history-entry>
@@ -362,6 +356,12 @@
     </history-entry>
     <history-entry file="GreetingsTests_shouldReturnGreetingsWithDefaultLang - 2019.04.11 at 12h 15m 08s.xml">
       <configuration name="GreetingsTests.shouldReturnGreetingsWithDefaultLang" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetingsTests_shouldClearUsers - 2019.04.11 at 12h 29m 56s.xml">
+      <configuration name="GreetingsTests.shouldClearUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetingsTests_shouldClearUsers - 2019.04.11 at 12h 30m 50s.xml">
+      <configuration name="GreetingsTests.shouldClearUsers" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -454,9 +454,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#270#287#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="147">
           <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
           <folding>
             <element signature="e#578#648#1" />
@@ -470,25 +485,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#270#287#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetingsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+        <state relative-caret-position="399">
+          <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
