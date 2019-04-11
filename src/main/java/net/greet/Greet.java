@@ -29,7 +29,6 @@ public class Greet {
         this.lang = lang;
 
 
-
     }
 
     public void adding(String name){
@@ -45,7 +44,7 @@ public class Greet {
 
     public void counter(){
 
-        System.out.println( addUserMap.size() + "user greeted");
+        System.out.println( addUserMap.size() + " " + "user greeted");
     }
     public void greeted(){
 
@@ -67,18 +66,18 @@ public class Greet {
         addUserMap.put(name, 0);
     }
 
-    public String help(){
+    public void help(){
 
-        return "Valid commands are:\n" +
+        System.out.println(" Valid commands are:\n" +
                 "\n" +
-                "greet followed by the name and the language the user is to be greeted in,\n" +
-                "greeted should display a list of all users that has been greeted and how many time each user has been greeted,\n" +
-                "greeted followed by a username returns how many times that username have been greeted,\n" +
-                "counter returns a count of how many unique users has been greeted,\n" +
-                "clear deletes of all users greeted and the reset the greet counter to 0,\n" +
-                "clear followed by a username delete the greet counter for the specified user and decrement the greet counter by 1,\n" +
-                "exit exits the application,\n" +
-                "help shows a user an overview of all possible commands.";
+                "greet >> followed by the name and the language the user is to be greeted in,\n" +
+                "greeted >> should display a list of all users that has been greeted and how many time each user has been greeted,\n" +
+                "greeted followed by a username >> returns how many times that username have been greeted,\n" +
+                "counter >> returns a count of how many unique users has been greeted,\n" +
+                "clear >> deletes of all users greeted and the reset the greet counter to 0,\n" +
+                "clear followed by a username >> delete the greet counter for the specified user and decrement the greet counter by 1,\n" +
+                "exit >> exits the application,\n" +
+                "help >> shows a user an overview of all possible commands.");
     }
 
 

@@ -16,7 +16,7 @@ public class RunGreet {
 
         while (true) {
 
-                System.out.println(" \n Enter a command : ");
+                System.out.println("\nEnter a command : ");
                 command = input.nextLine();
                 String[] word = command.trim().split("\\s");
 
