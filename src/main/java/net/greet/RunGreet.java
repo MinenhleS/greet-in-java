@@ -12,7 +12,7 @@ public class RunGreet {
         Scanner input = new Scanner(System.in);
         System.out.println(" \n ***************WELCOME TO OUR GREETINGAPP*************** \n \n ");
 
-        Greet in = new Greet();
+        Greet in = new GreetDB();
 
         while (true) {
 

@@ -4,7 +4,7 @@ package net.greet;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Greet {
+public class Greet implements Greetings{
 
     String name;
     String lang;
@@ -30,7 +30,7 @@ public class Greet {
 
 
     }
-
+        @Override
     public void adding(String name){
 
         if (!addUserMap.containsKey(name)) {
@@ -42,16 +42,19 @@ public class Greet {
         addUserMap.put(name, userCounter);
     }
 
+    @Override
     public void counter(){
 
         System.out.println( addUserMap.size() + " " + "user greeted");
     }
+
+    @Override
     public void greeted(){
 
         System.out.println("The list of the greeted : " + addUserMap);
     }
 
-
+    @Override
     public void greetedUsers(String name) {
 
         System.out.println( name + " is greeted "+ addUserMap.get(name) + " time(s)");
@@ -96,6 +99,7 @@ public class Greet {
             return Languages.valueOf("IsiZulu").getLang();
         }
     }
+
 
 
 
