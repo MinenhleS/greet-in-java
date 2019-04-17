@@ -1,6 +1,7 @@
 package net.greet;
 
 import java.sql.*;
+import java.util.Map;
 
 public class GreetDB implements Greetings {
 
@@ -69,49 +70,50 @@ public class GreetDB implements Greetings {
     }
 
 
+//    @Override
+//    public int counter() {
+//
+//        try {
+//
+//            return (psAllUsers.executeQuery());
+//
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//
+//
+//        }
+//
+//    }
+
     @Override
-    public void counter() {
-
-        try {
-
-            System.out.println(psAllUsers.executeQuery());
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-
-
-        }
-
-    }
-
-    @Override
-    public void greetedUsers(String name) {
+    public String greetedUsers(String name) {
 
         try {
             psGreetsCount.setString(1, name.toString());
             ResultSet rs = psGreetsCount.executeQuery();
             if (rs.next()) {
-                System.out.println(rs.getInt("user_count"));
+               return String.valueOf((rs.getInt("user_count")));
 
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        System.out.println(0);
+        return "0";
     }
 
         @Override
-    public void greeted() {
+    public String greeted() {
 
         try {
 
-            System.out.println(psListOfAll.execute());
+            return String.valueOf((psListOfAll.execute()));
         }
         catch (SQLException ex) {
             ex.printStackTrace();
         }
-    }
+            return null;
+        }
 
 }
 

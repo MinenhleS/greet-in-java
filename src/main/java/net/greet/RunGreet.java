@@ -12,7 +12,8 @@ public class RunGreet {
         Scanner input = new Scanner(System.in);
         System.out.println(" \n ***************WELCOME TO OUR GREETINGAPP*************** \n \n ");
 
-        Greet in = new GreetDB();
+        GreetMessage put = new GreetMessage();
+        GreetDB in = new GreetDB();
 
         while (true) {
 
@@ -30,19 +31,19 @@ public class RunGreet {
                     if (word.length == 3) {
 
 
-                        in.GreetM(word[1], word[2]);
+                        put.GreetM(word[1], word[2]);
                         in.adding(word[1]);
 
-                        System.out.println(in.getLang() + ", " + in.getName());
+                        System.out.println(put.messageDisplay());
                         System.out.println(" \n Added!");
 
                     }
 
                     else if (!(word.length == 3)) {
-                        in.GreetM(word[1], null);
+                        put.GreetM(word[1], null);
                         in.adding(word[1]);
 
-                        System.out.println(in.getLang() + "," + in.getName());
+                        System.out.println(put.messageDisplay());
                         System.out.println(" \n Added!");
 
                     }
@@ -52,35 +53,35 @@ public class RunGreet {
 
 
                         if (!(word.length == 2)) {
-                                in.greeted();
+                            System.out.println("The list of the greeted : " + in.greeted());
                         }
 
                         else if (word.length == 2) {
 
-                             in.greetedUsers(word[1]);
+                            System.out.println(in.greetedUsers(word[1]));
                         }
                 }
 
 
-                else if (word[0].equalsIgnoreCase("counter")) {
-
-                    in.counter();
-                }
-
-                else if(word[0].equalsIgnoreCase("clear")){
-
-                        if(!(word.length == 2)){
-                            in.clear();
-                        }
-                        else if(word.length == 2){
-                            in.clear(word[1]);
-                        }
-                }
-
-                else if(word[0].equalsIgnoreCase("help")){
-
-                    in.help();
-            }
+////                else if (word[0].equalsIgnoreCase("counter")) {
+////
+////                    System.out.println(in.counter()+ " " + "user greeted");
+////                }
+//
+//                else if(word[0].equalsIgnoreCase("clear")){
+//
+//                        if(!(word.length == 2)){
+//                            System.out.println(in.clear());
+//                        }
+//                        else if(word.length == 2){
+//                            System.out.println(in.clear(word[1]));
+//                        }
+//                }
+//
+//                else if(word[0].equalsIgnoreCase("help")){
+//
+//                    System.out.println(in.help());
+//            }
 
 
 

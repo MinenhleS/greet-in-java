@@ -1,5 +1,7 @@
 package net.greet;
 
+import java.util.Map;
+
 public interface Greetings {
 
     //String getName();
@@ -8,17 +10,18 @@ public interface Greetings {
 
     //void GreetM(String name, String lang);
 
+
     void adding(String name);
 
-    void counter();
+    //int counter();
 
-    void greeted();
+    String greeted();
 
-    void greetedUsers(String name);
+    String greetedUsers(String name);
 
-    //void clear();
+    //String clear();
 
-    //void help();
+    //String help();
 
 
 
