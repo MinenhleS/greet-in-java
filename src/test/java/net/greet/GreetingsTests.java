@@ -95,7 +95,7 @@ public class GreetingsTests {
         in.adding("Ngwenya");
         in.adding("mukela");
 
-        in.clear();
+        //in.clear();
 
         assertEquals(in.addUserMap.toString(),"{}");
         assertEquals(in.addUserMap.size(), 0);
@@ -117,7 +117,7 @@ public class GreetingsTests {
         in.adding("Ngwenya");
         in.adding("mukela");
 
-        in.clear("Siya");
+        //in.clear("Siya");
 
         assertEquals(in.addUserMap.toString(),"{mukela=2, Siya=0, dino=2, Ngwenya=1}");
 

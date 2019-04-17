@@ -63,21 +63,21 @@ public class RunGreet {
                 }
 
 
-////                else if (word[0].equalsIgnoreCase("counter")) {
-////
-////                    System.out.println(in.counter()+ " " + "user greeted");
-////                }
-//
-//                else if(word[0].equalsIgnoreCase("clear")){
-//
-//                        if(!(word.length == 2)){
-//                            System.out.println(in.clear());
-//                        }
-//                        else if(word.length == 2){
-//                            System.out.println(in.clear(word[1]));
-//                        }
-//                }
-//
+                else if (word[0].equalsIgnoreCase("counter")) {
+
+                    System.out.println(in.counter()+ " " + "user greeted");
+                }
+
+                else if(word[0].equalsIgnoreCase("clear")){
+
+                        if(!(word.length == 2)){
+                            System.out.println(in.clear());
+                        }
+                        else if(word.length == 2){
+                            System.out.println(in.clear(word[1]));
+                        }
+                }
+
 //                else if(word[0].equalsIgnoreCase("help")){
 //
 //                    System.out.println(in.help());

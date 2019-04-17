@@ -29,11 +29,11 @@ public class Greet implements Greetings{
         addUserMap.put(name, userCounter);
     }
 
-//    @Override
-//    public int counter(){
-//
-//        return(addUserMap.size());
-//    }
+    @Override
+    public int counter(){
+
+        return(addUserMap.size());
+    }
 
     @Override
     public  Map<String, Integer> greeted(){
@@ -48,16 +48,16 @@ public class Greet implements Greetings{
 
     }
 
-//    public String clear() {
-//        addUserMap.clear();
-//        return " Cleared List ";
-//    }
-//
-//    public String clear(String name) {
-//        addUserMap.put(name, 0);
-//        return name + " Cleared";
-//    }
-//
+    public String clear() {
+        addUserMap.clear();
+        return " Cleared List ";
+    }
+
+    public String clear(String name) {
+        addUserMap.put(name, 0);
+        return name + " Cleared";
+    }
+
 //    public String help(){
 //
 //        return(" Valid commands are:\n" +

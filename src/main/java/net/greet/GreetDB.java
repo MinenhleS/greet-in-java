@@ -16,14 +16,18 @@ public class GreetDB implements Greetings {
 
     final String FIND_LIST_SQL = "select * from GreetUser ";
 
+    final String DELETE_USER_SQL = "delete from GreetUser where name = ?";
+
+    final String DELETE_ALL_SQL = "delete from GreetUser";
+
     Connection conn;
     PreparedStatement psCreateNewGreetings;
     PreparedStatement psGreetsCount;
     PreparedStatement psUpdateGreetsCount;
     PreparedStatement psAllUsers;
     PreparedStatement psListOfAll;
-
-
+    PreparedStatement psDelUser;
+    PreparedStatement psDelAll;
 
     public GreetDB() {
         try {
@@ -35,6 +39,8 @@ public class GreetDB implements Greetings {
             psUpdateGreetsCount = conn.prepareStatement(UPDATE_USER_SQL);
             psAllUsers = conn.prepareStatement(FIND_ALL_SQL);
             psListOfAll = conn.prepareStatement(FIND_LIST_SQL);
+            psDelUser = conn.prepareStatement(DELETE_USER_SQL);
+            psDelAll = conn.prepareStatement(DELETE_ALL_SQL);
 
         } catch (Exception ex) {
 
@@ -42,6 +48,8 @@ public class GreetDB implements Greetings {
         }
 
     }
+
+    Map<String, Integer> map = new HashMap();
 
     @Override
     public void adding(String name) {
@@ -71,20 +79,24 @@ public class GreetDB implements Greetings {
     }
 
 
-//    @Override
-//    public int counter() {
-//
-//        try {
-//
-//            return (psAllUsers.executeQuery());
-//
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//
-//
-//        }
-//
-//    }
+    @Override
+    public int counter() {
+
+        try {
+
+            ResultSet rsAll = psListOfAll.executeQuery();
+            while (rsAll.next()){
+
+               return map.size();
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+
+        }
+
+        return 0;
+    }
 
     @Override
     public String greetedUsers(String name) {
@@ -105,7 +117,7 @@ public class GreetDB implements Greetings {
 
         @Override
     public Map<String, Integer> greeted() {
-        Map<String, Integer> map = new HashMap();
+
 
             try {
 
@@ -121,6 +133,38 @@ public class GreetDB implements Greetings {
             return map;
         }
 
+        public String clear(String name){
+
+            try {
+                psDelUser.setString(1, name.toString());
+                ResultSet rsDel = psDelUser.executeQuery();
+
+            }
+            catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        return name + " cleared ";
+
+        }
+
+        public String clear(){
+
+            try {
+
+                ResultSet rsDel = psDelAll.executeQuery();
+
+
+            }
+            catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            return " List cleared ";
+
+        }
+
+
 }
+
+
 
 

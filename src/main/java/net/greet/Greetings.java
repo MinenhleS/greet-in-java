@@ -13,13 +13,15 @@ public interface Greetings {
 
     void adding(String name);
 
-   // int counter();
+    int counter();
 
     Map<String, Integer> greeted();
 
     String greetedUsers(String name);
 
-    //String clear();
+    String clear(String name);
+
+    String clear();
 
     //String help();
 
