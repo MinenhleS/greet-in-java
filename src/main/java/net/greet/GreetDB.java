@@ -1,6 +1,7 @@
 package net.greet;
 
 import java.sql.*;
+import java.util.HashMap;
 import java.util.Map;
 
 public class GreetDB implements Greetings {
@@ -27,7 +28,7 @@ public class GreetDB implements Greetings {
     public GreetDB() {
         try {
             conn = DriverManager.
-                    getConnection("jdbc:h2:file:./target/Create_GreetUser", "sa", "");
+                    getConnection("jdbc:h2:file:./target/GreetUser", "sa", "");
 
             psCreateNewGreetings = conn.prepareStatement(INSERT_USER_SQL);
             psGreetsCount = conn.prepareStatement(FIND_USER_SQL);
@@ -92,27 +93,32 @@ public class GreetDB implements Greetings {
             psGreetsCount.setString(1, name.toString());
             ResultSet rs = psGreetsCount.executeQuery();
             if (rs.next()) {
-               return String.valueOf((rs.getInt("user_count")));
+               return String.valueOf(( name + " is greeted " + rs.getInt("user_count") + " time(s) "));
 
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
-        return "0";
+        return "this user is not greeted!!";
     }
 
         @Override
-    public String greeted() {
+    public Map<String, Integer> greeted() {
+        Map<String, Integer> map = new HashMap();
 
-        try {
+            try {
 
-            return String.valueOf((psListOfAll.execute()));
-        }
-        catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-            return null;
+                ResultSet rsAll = psListOfAll.executeQuery();
+                while (rsAll.next()) {
+                    map.put(rsAll.getString("name"), rsAll.getInt("user_count"));
+
+                }
+
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            return map;
         }
 
 }

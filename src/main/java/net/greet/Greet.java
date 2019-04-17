@@ -36,9 +36,9 @@ public class Greet implements Greetings{
 //    }
 
     @Override
-    public String greeted(){
+    public  Map<String, Integer> greeted(){
 
-        return String.valueOf(( addUserMap));
+        return (( addUserMap));
     }
 
     @Override

@@ -1,3 +1,0 @@
-2019-04-17 09:23:27 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "GREETUSER" not found; SQL statement:
-insert into GreetUser (name, user_count) values(?, ?) [42102-199]

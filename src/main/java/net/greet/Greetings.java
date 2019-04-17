@@ -13,9 +13,9 @@ public interface Greetings {
 
     void adding(String name);
 
-    //int counter();
+   // int counter();
 
-    String greeted();
+    Map<String, Integer> greeted();
 
     String greetedUsers(String name);
 
