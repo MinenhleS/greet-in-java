@@ -70,7 +70,7 @@ public class RunGreet {
 
                 else if(word[0].equalsIgnoreCase("clear")){
 
-                        if(!(word.length == 2)){
+                        if((word.length == 1)){
                             System.out.println(in.clear());
                         }
                         else if(word.length == 2){

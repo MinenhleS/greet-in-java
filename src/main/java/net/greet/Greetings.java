@@ -23,7 +23,7 @@ public interface Greetings {
 
     String clear();
 
-    //String help();
+    String help();
 
 
 

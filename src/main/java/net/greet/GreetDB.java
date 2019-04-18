@@ -2,6 +2,7 @@ package net.greet;
 
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class GreetDB implements Greetings {
@@ -49,7 +50,7 @@ public class GreetDB implements Greetings {
 
     }
 
-    Map<String, Integer> map = new HashMap();
+
 
     @Override
     public void adding(String name) {
@@ -82,21 +83,21 @@ public class GreetDB implements Greetings {
     @Override
     public int counter() {
 
-        try {
+//        try {
 
-            ResultSet rsAll = psListOfAll.executeQuery();
-            while (rsAll.next()){
+//            ResultSet rsAll = psListOfAll.executeQuery();
+//            while (rsAll.next()){
 
-               return map.size();
-            }
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-
-        }
-
-        return 0;
-    }
+               return greeted().size();
+//            }
+//
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//
+//        }
+//
+//        return 0;
+ }
 
     @Override
     public String greetedUsers(String name) {
@@ -117,7 +118,7 @@ public class GreetDB implements Greetings {
 
         @Override
     public Map<String, Integer> greeted() {
-
+            Map<String, Integer> map = new HashMap();
 
             try {
 
@@ -137,13 +138,18 @@ public class GreetDB implements Greetings {
 
             try {
                 psDelUser.setString(1, name.toString());
-                ResultSet rsDel = psDelUser.executeQuery();
-
+//                Iterator<String> user = map.entrySet().iterator();
+//                while (user.hasNext()) {
+//                    if (user.next().contains(name)){
+//                        user.remove();
+//                    }
+//                }
+                psDelUser.executeUpdate();
             }
             catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        return name + " cleared ";
+        return name + " \n cleared ";
 
         }
 
@@ -151,7 +157,8 @@ public class GreetDB implements Greetings {
 
             try {
 
-                ResultSet rsDel = psDelAll.executeQuery();
+                 psDelAll.execute();
+                //System.out.println(greeted() + " greeted");
 
 
             }
@@ -161,6 +168,20 @@ public class GreetDB implements Greetings {
             return " List cleared ";
 
         }
+
+    public String help(){
+
+        return(" Valid commands are:\n" +
+                "\n" +
+                "greet >> followed by the name and the language the user is to be greeted in,\n" +
+                "greeted >> should display a list of all users that has been greeted and how many time each user has been greeted,\n" +
+                "greeted followed by a username >> returns how many times that username have been greeted,\n" +
+                "counter >> returns a count of how many unique users has been greeted,\n" +
+                "clear >> deletes of all users greeted and the reset the greet counter to 0,\n" +
+                "clear followed by a username >> delete the greet counter for the specified user and decrement the greet counter by 1,\n" +
+                "exit >> exits the application,\n" +
+                "help >> shows a user an overview of all possible commands.");
+    }
 
 
 }
