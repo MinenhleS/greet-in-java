@@ -14,6 +14,7 @@ public class RunGreet {
 
         GreetMessage put = new GreetMessage();
         GreetDB in = new GreetDB();
+        //Greet in = new Greet();
 
         while (true) {
 
@@ -78,10 +79,10 @@ public class RunGreet {
                         }
                 }
 
-//                else if(word[0].equalsIgnoreCase("help")){
-//
-//                    System.out.println(in.help());
-//            }
+                else if(word[0].equalsIgnoreCase("help")){
+
+                    System.out.println(in.help());
+            }
 
 
 
