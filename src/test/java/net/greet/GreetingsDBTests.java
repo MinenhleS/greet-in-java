@@ -1,34 +1,60 @@
 package net.greet;
 
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class GreetingsTests {
+public class GreetingsDBTests {
 
+    final String DATABASE_URL = "jdbc:h2:file:./target/GreetUser";
+
+    public Connection getConnection() throws Exception {
+
+        Connection conn = DriverManager.getConnection(DATABASE_URL, "sa", "");
+        return conn;
+    }
+
+    @BeforeEach
+    public void cleanUpTable() {
+        try {
+            try(Connection conn = getConnection()) {
+                Statement statement = conn.createStatement();
+                statement.addBatch("delete from GreetUser");
+                statement.executeBatch();
+
+            }
+        } catch(Exception ex) {
+            System.out.println( ex);
+        }
+    }
 
     @Test
     public void shouldReturnGreeted(){
 
-        Greet in = new Greet();
+        GreetDB in = new GreetDB();
         in.adding("Siya");
         in.adding("Mukela");
         in.adding("Dino");
-
-        assertEquals(in.addUserMap.toString(),"{Dino=1, Siya=1, Mukela=1}");
+        //System.out.println(in.greeted());
+        assertEquals(in.greeted().toString(),"{Dino=1, Siya=1, Mukela=1}");
     }
 
     @Test
     public void shouldReturnHowMuchUserIsGreeted(){
 
-        Greet in = new Greet();
+        GreetDB in = new GreetDB();
         in.adding("Siya");
         in.adding("Siya");
         in.adding("dino");
         in.adding("Siya");
         in.adding("mukela");
 
-        assertEquals(in.addUserMap.get("Siya").toString(),"3");
+        assertEquals(in.greetedUsers("Siya"),"3");
 
     }
 
@@ -47,9 +73,8 @@ public class GreetingsTests {
         in.adding("Ngwenya");
         in.adding("mukela");
 
-        assertEquals(in.addUserMap.size(), 4);
+        assertEquals(in.counter(), 4);
     }
-
 
     @Test
     public void shouldClearUsers(){
@@ -68,8 +93,8 @@ public class GreetingsTests {
 
         in.clear();
 
-        assertEquals(in.addUserMap.toString(),"{}");
-        assertEquals(in.addUserMap.size(), 0);
+        assertEquals(in.greeted(),"{}");
+        //assertEquals(in.clear().size(), 0);
     }
 
     @Test
@@ -90,9 +115,8 @@ public class GreetingsTests {
 
         in.clear("Siya");
 
-        assertEquals(in.addUserMap.toString(),"{mukela=2, Siya=0, dino=2, Ngwenya=1}");
+        assertEquals(in.greeted(),"{mukela=2, dino=2, Ngwenya=1}");
 
     }
-
 
 }
