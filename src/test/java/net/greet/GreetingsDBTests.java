@@ -1,6 +1,7 @@
 package net.greet;
 
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.sql.Connection;
@@ -14,22 +15,24 @@ public class GreetingsDBTests {
     final String DATABASE_URL = "jdbc:h2:file:./target/GreetUser";
 
     public Connection getConnection() throws Exception {
+        Class.forName("org.h2.Driver");
 
         Connection conn = DriverManager.getConnection(DATABASE_URL, "sa", "");
         return conn;
     }
 
     @BeforeEach
-    public void cleanUpTable() {
+    void cleanUpTable() {
         try {
             try(Connection conn = getConnection()) {
                 Statement statement = conn.createStatement();
                 statement.addBatch("delete from GreetUser");
                 statement.executeBatch();
+                System.out.println("----------");
 
             }
         } catch(Exception ex) {
-            System.out.println( ex);
+            System.out.println("ERROR: " + ex);
         }
     }
 
@@ -54,14 +57,14 @@ public class GreetingsDBTests {
         in.adding("Siya");
         in.adding("mukela");
 
-        assertEquals(in.greetedUsers("Siya"),"3");
+        assertEquals(in.greetedUsers("Siya"),"Siya is greeted " + 3 + " time(s) ");
 
     }
 
     @Test
     public void shouldReturnCounter(){
 
-        Greet in = new Greet();
+        GreetDB in = new GreetDB();
         in.adding("Siya");
         in.adding("Siya");
         in.adding("dino");
@@ -79,7 +82,7 @@ public class GreetingsDBTests {
     @Test
     public void shouldClearUsers(){
 
-        Greet in = new Greet();
+        GreetDB in = new GreetDB();
         in.adding("Siya");
         in.adding("Siya");
         in.adding("dino");
@@ -93,14 +96,14 @@ public class GreetingsDBTests {
 
         in.clear();
 
-        assertEquals(in.greeted(),"{}");
+        assertEquals(in.greeted().toString(),"{}");
         //assertEquals(in.clear().size(), 0);
     }
 
     @Test
     public void shouldClearSpecificUser(){
 
-        Greet in = new Greet();
+        GreetDB in = new GreetDB();
 
         in.adding("Siya");
         in.adding("Siya");
@@ -115,7 +118,7 @@ public class GreetingsDBTests {
 
         in.clear("Siya");
 
-        assertEquals(in.greeted(),"{mukela=2, dino=2, Ngwenya=1}");
+        assertEquals(in.greeted().toString(),"{mukela=2, dino=2, Ngwenya=1}");
 
     }
 

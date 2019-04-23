@@ -64,7 +64,7 @@ public class GreetDB implements Greetings {
 
                 psCreateNewGreetings.setString(1, name.toString());
                 psCreateNewGreetings.setInt(2, 1);
-                System.out.println(psCreateNewGreetings.execute());
+               psCreateNewGreetings.execute();
 
             } else {
                 int nameCount = rsName.getInt("user_count");
@@ -154,6 +154,7 @@ public class GreetDB implements Greetings {
         }
 
         public String clear(){
+
 
             try {
 
