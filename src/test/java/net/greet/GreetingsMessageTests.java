@@ -23,7 +23,7 @@ public class GreetingsMessageTests {
         GreetMessage in = new GreetMessage();
         in.GreetM("minenhle", "Afrikaans");
 
-        assertEquals(in.getLang() + ", " + in.getName(), "Haai, minenhle");
+        assertEquals(in.messageDisplay(), "Haai, minenhle");
     }
 
     @Test
@@ -32,6 +32,6 @@ public class GreetingsMessageTests {
         GreetMessage in = new GreetMessage();
         in.GreetM("Dino", null);
 
-        assertEquals(in.getLang() + ", " + in.getName(), "Sawubona, Dino");
+        assertEquals(in.messageDisplay(), "Sawubona, Dino");
     }
 }

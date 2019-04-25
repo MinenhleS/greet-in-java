@@ -2,7 +2,6 @@ package net.greet;
 
 import java.sql.*;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class GreetDB implements Greetings {
@@ -57,19 +56,19 @@ public class GreetDB implements Greetings {
 
         try {
 
-            psGreetsCount.setString(1, name.toString());
+            psGreetsCount.setString(1, name);
             ResultSet rsName = psGreetsCount.executeQuery();
 
             if (!rsName.next()) {
 
-                psCreateNewGreetings.setString(1, name.toString());
+                psCreateNewGreetings.setString(1, name);
                 psCreateNewGreetings.setInt(2, 1);
                psCreateNewGreetings.execute();
 
             } else {
                 int nameCount = rsName.getInt("user_count");
                 psUpdateGreetsCount.setInt(1, ++nameCount);
-                psUpdateGreetsCount.setString(2, name.toString());
+                psUpdateGreetsCount.setString(2, name);
                 psUpdateGreetsCount.execute();
             }
 
@@ -83,20 +82,8 @@ public class GreetDB implements Greetings {
     @Override
     public int counter() {
 
-//        try {
-
-//            ResultSet rsAll = psListOfAll.executeQuery();
-//            while (rsAll.next()){
-
                return greeted().size();
-//            }
-//
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//
-//        }
-//
-//        return 0;
+
  }
 
     @Override
@@ -138,12 +125,7 @@ public class GreetDB implements Greetings {
 
             try {
                 psDelUser.setString(1, name.toString());
-//                Iterator<String> user = map.entrySet().iterator();
-//                while (user.hasNext()) {
-//                    if (user.next().contains(name)){
-//                        user.remove();
-//                    }
-//                }
+
                 psDelUser.executeUpdate();
             }
             catch (SQLException ex) {
@@ -159,7 +141,7 @@ public class GreetDB implements Greetings {
             try {
 
                  psDelAll.execute();
-                //System.out.println(greeted() + " greeted");
+
 
 
             }

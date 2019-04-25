@@ -43,7 +43,7 @@ public class GreetingsDBTests {
         in.adding("Siya");
         in.adding("Mukela");
         in.adding("Dino");
-        //System.out.println(in.greeted());
+
         assertEquals(in.greeted().toString(),"{Dino=1, Siya=1, Mukela=1}");
     }
 
@@ -97,7 +97,7 @@ public class GreetingsDBTests {
         in.clear();
 
         assertEquals(in.greeted().toString(),"{}");
-        //assertEquals(in.clear().size(), 0);
+
     }
 
     @Test

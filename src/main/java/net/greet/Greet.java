@@ -6,10 +6,6 @@ import java.util.Map;
 
 public class Greet implements Greetings{
 
-    int countZulu;
-    int countAfrikaans;
-    int countTswana;
-
     public Greet() {
 
     }
