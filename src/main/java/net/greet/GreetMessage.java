@@ -8,7 +8,7 @@ public class GreetMessage {
     public void GreetM(String name, String lang) {
 
         if(lang == null) {
-            lang = "IsiZulu";
+            lang =  Languages.valueOf("IsiZulu").getLang();
         }
 
         this.name = name;

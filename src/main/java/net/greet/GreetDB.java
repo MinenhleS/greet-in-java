@@ -93,7 +93,7 @@ public class GreetDB implements Greetings {
             psGreetsCount.setString(1, name.toString());
             ResultSet rs = psGreetsCount.executeQuery();
             if (rs.next()) {
-               return String.valueOf(( name + " is greeted " + rs.getInt("user_count") + " time(s) "));
+               return String.valueOf(( name + " is greeted " + rs.getInt("user_count") + " time(s)"));
 
             }
         } catch (SQLException ex) {

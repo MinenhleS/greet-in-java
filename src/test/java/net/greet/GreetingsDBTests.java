@@ -1,6 +1,5 @@
 package net.greet;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -57,7 +56,7 @@ public class GreetingsDBTests {
         in.adding("Siya");
         in.adding("mukela");
 
-        assertEquals(in.greetedUsers("Siya"),"Siya is greeted " + 3 + " time(s) ");
+        assertEquals(in.greetedUsers("Siya"),"Siya is greeted 3 time(s)");
 
     }
 
