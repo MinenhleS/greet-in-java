@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04a8bf47-b1ab-4ab7-b0a2-da5f848afa68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GreetUser.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/GreetUser.mv.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,17 +75,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="405">
+              <caret line="27" column="69" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="348">
+              <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,23 +120,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="139">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#148#149#0" expanded="true" />
                 <element signature="e#200#201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetingsDBTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-672">
-              <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,6 +169,8 @@
         <option value="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java" />
       </list>
     </option>
   </component>
@@ -267,7 +272,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -286,8 +291,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CommandBuilderTests">
-    <configuration name="CommandBuilderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CommandProcessorTests.shouldClearAll">
+    <configuration name="CommandProcessorTests.shouldClearAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
         <pattern>
@@ -296,83 +301,101 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.CommandBuilderTests" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.CommandProcessorTests" />
+      <option name="METHOD_NAME" value="shouldClearAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTests.shouldClearUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.CommandProcessorTests" />
+      <option name="METHOD_NAME" value="shouldClearUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTests.shouldReturnCounter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.CommandProcessorTests" />
+      <option name="METHOD_NAME" value="shouldReturnCounter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTests.shouldReturnGreeted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.CommandProcessorTests" />
+      <option name="METHOD_NAME" value="shouldReturnGreeted" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTests.shouldReturnGreetedUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.CommandProcessorTests" />
+      <option name="METHOD_NAME" value="shouldReturnGreetedUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="commandProcessorTests" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.commandProcessorTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandBuilderTests.shouldReturnComand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.CommandBuilderTests" />
-      <option name="METHOD_NAME" value="shouldReturnComand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandBuilderTests.shouldReturnDefaultLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.CommandBuilderTests" />
-      <option name="METHOD_NAME" value="shouldReturnDefaultLanguage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandBuilderTests.shouldReturnLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.CommandBuilderTests" />
-      <option name="METHOD_NAME" value="shouldReturnLanguage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandBuilderTests.shouldReturnUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.CommandBuilderTests" />
-      <option name="METHOD_NAME" value="shouldReturnUserName" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CommandBuilderTests" />
-        <item itemvalue="JUnit.CommandBuilderTests.shouldReturnDefaultLanguage" />
-        <item itemvalue="JUnit.CommandBuilderTests.shouldReturnLanguage" />
-        <item itemvalue="JUnit.CommandBuilderTests.shouldReturnUserName" />
-        <item itemvalue="JUnit.CommandBuilderTests.shouldReturnComand" />
+        <item itemvalue="JUnit.CommandProcessorTests.shouldClearAll" />
+        <item itemvalue="JUnit.CommandProcessorTests.shouldClearUser" />
+        <item itemvalue="JUnit.CommandProcessorTests.shouldReturnCounter" />
+        <item itemvalue="JUnit.CommandProcessorTests.shouldReturnGreetedUser" />
+        <item itemvalue="JUnit.CommandProcessorTests.shouldReturnGreeted" />
       </list>
     </recent_temporary>
   </component>
@@ -390,41 +413,75 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GreetingsDBTests_shouldClearUsers - 2019.04.30 at 10h 56m 32s.xml">
-      <configuration name="GreetingsDBTests.shouldClearUsers" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreetCommand - 2019.05.02 at 16h 01m 16s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreetCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetingsDBTests_shouldClearSpecificUser - 2019.04.30 at 10h 56m 51s.xml">
-      <configuration name="GreetingsDBTests.shouldClearSpecificUser" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreetCommand - 2019.05.02 at 16h 01m 48s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreetCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnComand - 2019.05.02 at 13h 37m 46s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnComand" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreetCommandwithDefault - 2019.05.02 at 16h 14m 32s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreetCommandwithDefault" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnUserName - 2019.05.02 at 13h 41m 10s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnUserName" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreeted - 2019.05.02 at 16h 46m 36s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreeted" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnUserName - 2019.05.02 at 13h 45m 17s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnUserName" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreeted - 2019.05.02 at 16h 48m 07s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreeted" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnLanguage - 2019.05.02 at 14h 02m 03s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnLanguage" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreeted - 2019.05.02 at 16h 48m 59s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreeted" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnDefaultLanguage - 2019.05.02 at 14h 02m 17s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnDefaultLanguage" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreetedUser - 2019.05.02 at 16h 50m 17s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreetedUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnDefaultLanguage - 2019.05.02 at 14h 02m 58s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnDefaultLanguage" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnGreetedUser - 2019.05.02 at 16h 50m 53s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnGreetedUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnDefaultLanguage - 2019.05.02 at 14h 05m 54s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnDefaultLanguage" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldReturnCounter - 2019.05.02 at 16h 52m 32s.xml">
+      <configuration name="CommandProcessorTests.shouldReturnCounter" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandBuilderTests_shouldReturnDefaultLanguage - 2019.05.02 at 14h 06m 37s.xml">
-      <configuration name="CommandBuilderTests.shouldReturnDefaultLanguage" configurationId="JUnit" />
+    <history-entry file="CommandProcessorTests_shouldClearUser - 2019.05.02 at 16h 53m 40s.xml">
+      <configuration name="CommandProcessorTests.shouldClearUser" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project Explorer" order="0" weight="0.32988048" />
+      <window_info id="Job Explorer" order="1" weight="0.32988048" />
+      <window_info id="DB Browser" order="2" weight="0.32988048" />
+      <window_info content_ui="combo" id="Project" order="3" weight="0.29721117" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="UI Designer" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info id="Favorites" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.11958147" />
+      <window_info anchor="bottom" id="Console" order="1" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="DB Execution Console" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.31240657" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.39910313" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3109118" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.14200298" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.32988048" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.24940239" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Project Explorer" order="0" weight="0.32988048" />
       <window_info id="Job Explorer" order="1" weight="0.32988048" />
       <window_info id="DB Browser" order="2" weight="0.32988048" />
@@ -448,7 +505,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3109118" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.12556054" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.14200298" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="2" />
@@ -457,40 +514,6 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.32988048" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24940239" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Project Explorer" order="0" weight="0.32988048" />
-      <window_info id="Job Explorer" order="1" weight="0.32988048" />
-      <window_info id="DB Browser" order="2" weight="0.32988048" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.29721117" />
-      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="UI Designer" order="7" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info id="Favorites" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.11958147" />
-      <window_info anchor="bottom" id="Console" order="1" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="DB Execution Console" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.29895365" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.39910313" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3109118" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.12556054" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.24940239" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.32988048" />
     </layout-to-restore>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -600,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetingsTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -619,7 +635,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="139">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#148#149#0" expanded="true" />
@@ -630,8 +646,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
