@@ -131,7 +131,7 @@ public class GreetDB implements Greetings {
             catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        return name + " cleared ";
+        return name + " cleared";
 
         }
 
@@ -148,7 +148,7 @@ public class GreetDB implements Greetings {
             catch (SQLException ex) {
                 ex.printStackTrace();
             }
-            return " List cleared ";
+            return "Cleared List";
 
         }
 

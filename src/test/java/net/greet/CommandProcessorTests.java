@@ -34,10 +34,13 @@ public class CommandProcessorTests {
     public void shouldReturnGreeted(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
+        commandProcessor.greet("greet siya");
+        commandProcessor.greet("greet dino");
+        commandProcessor.greet("greet siya");
+        commandProcessor.greet("greet mini");
+        commandProcessor.greet("greet siya");
 
-
-
-        assertEquals("The list of the greeted : {siya=5}", commandProcessor.greet("greeted"));
+        assertEquals("The list of the greeted : {mini=1, dino=1, siya=3}", commandProcessor.greet("greeted"));
 
     }
 
@@ -45,10 +48,11 @@ public class CommandProcessorTests {
     public void shouldReturnGreetedUser(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
+        commandProcessor.greet("greet siya");
+        commandProcessor.greet("greet dino");
+        commandProcessor.greet("greet siya");
 
-
-
-        assertEquals("siya is greeted 5 time(s)", commandProcessor.greet("greeted siya"));
+        assertEquals("siya is greeted 2 time(s)", commandProcessor.greet("greeted siya"));
 
     }
 
@@ -56,10 +60,12 @@ public class CommandProcessorTests {
     public void shouldReturnCounter(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
+        commandProcessor.greet("greet siya");
+        commandProcessor.greet("greet dino");
+        commandProcessor.greet("greet siya");
 
 
-
-        assertEquals("1 user greeted", commandProcessor.greet("counter"));
+        assertEquals("2 user greeted", commandProcessor.greet("counter"));
 
     }
 
@@ -67,10 +73,14 @@ public class CommandProcessorTests {
     public void shouldClearUser(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
+        commandProcessor.greet("greet siya");
+        commandProcessor.greet("greet dino");
+        commandProcessor.greet("greet siya");
 
 
 
-        assertEquals("siya cleared", commandProcessor.greet("clear siya"));
+
+        assertEquals("siya Cleared", commandProcessor.greet("clear siya"));
 
     }
 
@@ -78,10 +88,14 @@ public class CommandProcessorTests {
     public void shouldClearAll(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
+        commandProcessor.greet("greet siya");
+        commandProcessor.greet("greet dino");
+        commandProcessor.greet("greet siya");
 
 
 
-        assertEquals("List cleared", commandProcessor.greet("clear"));
+
+        assertEquals("Cleared List", commandProcessor.greet("clear"));
 
     }
 

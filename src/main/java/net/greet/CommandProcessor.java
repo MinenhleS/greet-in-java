@@ -1,14 +1,9 @@
 package net.greet;
 
-import java.util.Scanner;
-
 public class CommandProcessor {
-    //Greet in = new Greet();
-    GreetDB in = new GreetDB();
+    Greet in = new Greet();
+    //GreetDB in = new GreetDB();
     GreetMessage put = new GreetMessage();
-
-
-
 
     public String greet(String taker) {
 
@@ -16,25 +11,13 @@ public class CommandProcessor {
 
         try {
 
-
             if (commandBuilder.getCommand().equalsIgnoreCase("greet")) {
-
-                if (commandBuilder.commandExtractor() == 3) {
-
 
                     put.GreetM(commandBuilder.getName(), commandBuilder.getLang());
                     in.adding(commandBuilder.getName());
 
                     return put.messageDisplay() + " \n \nAdded user!";
 
-                } else if (!(commandBuilder.commandExtractor() == 3)) {
-                    put.GreetM(commandBuilder.getName(), null);
-                    in.adding(commandBuilder.getName());
-
-                    return put.messageDisplay() + " \n \nAdded user!";
-
-
-                }
 
             } else if (commandBuilder.getCommand().equalsIgnoreCase("greeted")) {
 
@@ -47,6 +30,7 @@ public class CommandProcessor {
 
                     return in.greetedUsers(commandBuilder.getName());
                 }
+
             } else if (commandBuilder.getCommand().equalsIgnoreCase("counter")) {
 
                 return in.counter() + " " + "user greeted";
@@ -65,6 +49,9 @@ public class CommandProcessor {
             } else if (commandBuilder.getCommand().equalsIgnoreCase("help")) {
 
                 return in.help();
+            }
+            else{
+                return "Invalid Command !!!";
             }
 
         }

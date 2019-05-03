@@ -46,7 +46,7 @@ public class Greet implements Greetings{
 
     public String clear() {
         addUserMap.clear();
-        return " Cleared List ";
+        return "Cleared List";
     }
 
     public String clear(String name) {

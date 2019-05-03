@@ -14,10 +14,32 @@ public class CommandBuilderTests {
     }
 
     @Test
-    public void shouldReturnUserName(){
-        CommandBuilder in = new CommandBuilder("greet siya Tswana");
+    public void shouldReturnInvalid(){
+        CommandBuilder in = new CommandBuilder("greet");
 
+        assertEquals("greet", in.getCommand());
+        assertEquals("", in.getName());
+
+
+    }
+
+    @Test
+    public void shouldReturnInvalidCommand(){
+        CommandBuilder in = new CommandBuilder("");
+
+        assertEquals("", in.getCommand());
+
+
+
+    }
+
+    @Test
+    public void shouldReturnUserName(){
+        CommandBuilder in = new CommandBuilder("greet siya");
+
+        assertEquals("greet", in.getCommand());
         assertEquals("siya", in.getName());
+
 
     }
 
@@ -26,6 +48,14 @@ public class CommandBuilderTests {
         CommandBuilder in = new CommandBuilder("greet siya Tswana");
 
         assertEquals("Tswana", in.getLang());
+
+    }
+
+    @Test
+    public void shouldReturnDefaultLanguage(){
+        CommandBuilder in = new CommandBuilder("greet siya");
+
+        assertEquals("IsiZulu", in.getLang());
 
     }
 

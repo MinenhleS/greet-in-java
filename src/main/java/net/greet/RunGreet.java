@@ -8,7 +8,6 @@ public class RunGreet {
     public static void main(String[] args) {
 
         String command;
-
         Scanner input = new Scanner(System.in);
         System.out.println(" \n ***************WELCOME TO OUR GREETINGAPP*************** \n \n ");
 
@@ -28,11 +27,10 @@ public class RunGreet {
 
                     System.out.println("\n You want to continue ??? Y / N");
                     String option = input.nextLine();
-
-                        if (!option.equalsIgnoreCase("Y")) {
+                    if (!option.equalsIgnoreCase("Y")) {
                             break;
 
-                        }
+                    }
 
 
 
