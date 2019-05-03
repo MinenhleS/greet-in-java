@@ -10,21 +10,15 @@ public class CommandProcessorTests {
     public void shouldReturnGreetCommand(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        //GreetMessage put = new GreetMessage();
-
-
 
         assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.greet("greet siya Tswana"));
 
     }
 
     @Test
-    public void shouldReturnGreetCommandwithDefault(){
+    public void shouldReturnGreetCommandWithDefault(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        //GreetMessage put = new GreetMessage();
-
-
 
         assertEquals("Sawubona, siya \n \nAdded user!", commandProcessor.greet("greet siya"));
 

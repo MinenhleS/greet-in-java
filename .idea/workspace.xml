@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="04a8bf47-b1ab-4ab7-b0a2-da5f848afa68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/GreetUser.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/GreetUser.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/greet/CommandProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/CommandProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/greet-in-java.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/greet/CommandBuilderTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/greet/CommandBuilderTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/greet/CommandProcessorTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/greet/CommandProcessorTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
-              <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="45">
+              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -83,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="1455">
               <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -160,13 +150,13 @@
         <option value="$PROJECT_DIR$/src/test/java/net/greet/GreetingsDBTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetMessage.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/greet/CommandBuilderTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java" />
       </list>
     </option>
   </component>
@@ -287,7 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CommandProcessorTests.shouldClearAll">
+  <component name="RunManager" selected="JUnit.CommandProcessorTests">
     <configuration name="CommandProcessorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
@@ -386,9 +376,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandProcessorTests" />
         <item itemvalue="JUnit.CommandProcessorTests.shouldClearAll" />
         <item itemvalue="JUnit.CommandProcessorTests.shouldClearUser" />
-        <item itemvalue="JUnit.CommandProcessorTests" />
         <item itemvalue="JUnit.CommandProcessorTests.shouldReturnGreeted" />
         <item itemvalue="JUnit.CommandProcessorTests.shouldReturnGreetedUser" />
       </list>
@@ -408,12 +398,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommandProcessorTests_shouldReturnGreeted - 2019.05.03 at 12h 16m 58s.xml">
-      <configuration name="CommandProcessorTests.shouldReturnGreeted" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CommandProcessorTests_shouldReturnGreeted - 2019.05.03 at 12h 17m 36s.xml">
-      <configuration name="CommandProcessorTests.shouldReturnGreeted" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CommandProcessorTests - 2019.05.03 at 12h 20m 14s.xml">
       <configuration name="CommandProcessorTests" configurationId="JUnit" />
     </history-entry>
@@ -438,6 +422,12 @@
     <history-entry file="CommandProcessorTests_shouldClearAll - 2019.05.03 at 12h 27m 43s.xml">
       <configuration name="CommandProcessorTests.shouldClearAll" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommandProcessorTests_shouldClearAll - 2019.05.03 at 12h 32m 11s.xml">
+      <configuration name="CommandProcessorTests.shouldClearAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandProcessorTests - 2019.05.03 at 12h 34m 50s.xml">
+      <configuration name="CommandProcessorTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -446,7 +436,7 @@
       <window_info id="Project Explorer" order="0" weight="0.32988048" />
       <window_info id="Job Explorer" order="1" weight="0.32988048" />
       <window_info id="DB Browser" order="2" weight="0.32988048" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.29721117" />
+      <window_info content_ui="combo" id="Project" order="3" weight="0.29721117" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
@@ -458,7 +448,7 @@
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="DB Execution Console" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.22272047" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.089686096" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39910313" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -492,12 +482,12 @@
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="DB Execution Console" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.22272047" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.22272047" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39910313" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3109118" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3109118" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.14200298" />
@@ -629,27 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,10 +639,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/CommandProcessorTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
