@@ -11,7 +11,7 @@ public class CommandProcessorTests {
 
         CommandProcessor commandProcessor = new CommandProcessor();
 
-        assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.greet("greet siya Tswana"));
+        assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.execute("greet siya Tswana"));
 
     }
 
@@ -20,7 +20,7 @@ public class CommandProcessorTests {
 
         CommandProcessor commandProcessor = new CommandProcessor();
 
-        assertEquals("Sawubona, siya \n \nAdded user!", commandProcessor.greet("greet siya"));
+        assertEquals("Sawubona, siya \n \nAdded user!", commandProcessor.execute("greet siya"));
 
     }
 
@@ -28,13 +28,14 @@ public class CommandProcessorTests {
     public void shouldReturnGreeted(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.greet("greet siya");
-        commandProcessor.greet("greet dino");
-        commandProcessor.greet("greet siya");
-        commandProcessor.greet("greet mini");
-        commandProcessor.greet("greet siya");
+        commandProcessor.execute("greet siya");
+        commandProcessor.execute("greet dino");
+        commandProcessor.execute("greet siya");
+        commandProcessor.execute("greet mini");
+        commandProcessor.execute("greet dino");
+        commandProcessor.execute("greet siya");
 
-        assertEquals("The list of the greeted : {mini=1, dino=1, siya=3}", commandProcessor.greet("greeted"));
+        assertEquals("The list of the greeted : {mini=1, dino=2, siya=3}", commandProcessor.execute("greeted"));
 
     }
 
@@ -42,11 +43,11 @@ public class CommandProcessorTests {
     public void shouldReturnGreetedUser(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.greet("greet siya");
-        commandProcessor.greet("greet dino");
-        commandProcessor.greet("greet siya");
+        commandProcessor.execute("greet siya");
+        commandProcessor.execute("greet dino");
+        commandProcessor.execute("greet siya");
 
-        assertEquals("siya is greeted 2 time(s)", commandProcessor.greet("greeted siya"));
+        assertEquals("siya is greeted 2 time(s)", commandProcessor.execute("greeted siya"));
 
     }
 
@@ -54,12 +55,11 @@ public class CommandProcessorTests {
     public void shouldReturnCounter(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.greet("greet siya");
-        commandProcessor.greet("greet dino");
-        commandProcessor.greet("greet siya");
+        commandProcessor.execute("greet siya");
+        commandProcessor.execute("greet dino");
+        commandProcessor.execute("greet siya");
 
-
-        assertEquals("2 user greeted", commandProcessor.greet("counter"));
+        assertEquals("2 user greeted", commandProcessor.execute("counter"));
 
     }
 
@@ -67,14 +67,14 @@ public class CommandProcessorTests {
     public void shouldClearUser(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.greet("greet siya");
-        commandProcessor.greet("greet dino");
-        commandProcessor.greet("greet siya");
+        commandProcessor.execute("greet siya");
+        commandProcessor.execute("greet dino");
+        commandProcessor.execute("greet siya");
 
 
 
 
-        assertEquals("siya Cleared", commandProcessor.greet("clear siya"));
+        assertEquals("siya Cleared", commandProcessor.execute("clear siya"));
 
     }
 
@@ -82,14 +82,14 @@ public class CommandProcessorTests {
     public void shouldClearAll(){
 
         CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.greet("greet siya");
-        commandProcessor.greet("greet dino");
-        commandProcessor.greet("greet siya");
+        commandProcessor.execute("greet siya");
+        commandProcessor.execute("greet dino");
+        commandProcessor.execute("greet siya");
 
 
 
 
-        assertEquals("Cleared List", commandProcessor.greet("clear"));
+        assertEquals("Cleared List", commandProcessor.execute("clear"));
 
     }
 

@@ -5,7 +5,7 @@ public class CommandProcessor {
     //GreetDB in = new GreetDB();
     GreetMessage put = new GreetMessage();
 
-    public String greet(String taker) {
+    public String execute(String taker) {
 
         CommandBuilder commandBuilder = new CommandBuilder(taker);
 

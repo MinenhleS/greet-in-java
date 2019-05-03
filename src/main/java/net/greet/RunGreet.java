@@ -23,16 +23,7 @@ public class RunGreet {
                 break;
             }
 
-                System.out.println(commandProcessor.greet(command));
-
-                    System.out.println("\n You want to continue ??? Y / N");
-                    String option = input.nextLine();
-                    if (!option.equalsIgnoreCase("Y")) {
-                            break;
-
-                    }
-
-
+                System.out.println(commandProcessor.execute(command));
 
         }
     }

@@ -7,8 +7,8 @@ public class CommandBuilder {
     String name;
     String lang;
 
-    public CommandBuilder(String word){
-        this.word = word.trim().split("\\s"); //word = "clear" => ['clear'] => 1
+    public CommandBuilder(String taker){
+        this.word = taker.trim().split("\\s");
 
 
     }
