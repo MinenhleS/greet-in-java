@@ -34,7 +34,7 @@ public class Greet implements Greetings{
     @Override
     public  Map<String, Integer> greeted(){
 
-        return (( addUserMap));
+        return addUserMap;
     }
 
     @Override
