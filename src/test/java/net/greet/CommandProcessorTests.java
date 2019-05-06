@@ -9,87 +9,99 @@ public class CommandProcessorTests {
     @Test
     public void shouldReturnGreetCommand(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
+        CommandBuilder commandBuilder = new CommandBuilder("greet siya Tswana");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
 
-        assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.execute("greet siya Tswana"));
+        assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.execute());
 
     }
 
     @Test
     public void shouldReturnGreetCommandWithDefault(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
+        CommandBuilder commandBuilder = new CommandBuilder("greet siya");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
 
-        assertEquals("Sawubona, siya \n \nAdded user!", commandProcessor.execute("greet siya"));
+        assertEquals("Sawubona, siya \n \nAdded user!", commandProcessor.execute());
 
     }
 
     @Test
     public void shouldReturnGreeted(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.execute("greet siya");
-        commandProcessor.execute("greet dino");
-        commandProcessor.execute("greet siya");
-        commandProcessor.execute("greet mini");
-        commandProcessor.execute("greet dino");
-        commandProcessor.execute("greet siya");
 
-        assertEquals("The list of the greeted : {mini=1, dino=2, siya=3}", commandProcessor.execute("greeted"));
+
+        CommandBuilder commandBuilder = new CommandBuilder("greeted");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
+
+        commandProcessor.in.adding("ace");
+        commandProcessor.in.adding("siya");
+        commandProcessor.in.adding("dino");
+
+
+        assertEquals("The list of the greeted : {ace=1, dino=1, siya=1}", commandProcessor.execute());
 
     }
 
     @Test
     public void shouldReturnGreetedUser(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.execute("greet siya");
-        commandProcessor.execute("greet dino");
-        commandProcessor.execute("greet siya");
+        CommandBuilder commandBuilder = new CommandBuilder("greeted siya");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
 
-        assertEquals("siya is greeted 2 time(s)", commandProcessor.execute("greeted siya"));
+        commandProcessor.in.adding("ace");
+        commandProcessor.in.adding("siya");
+        commandProcessor.in.adding("dino");
+        commandProcessor.in.adding("ace");
+        commandProcessor.in.adding("siya");
+
+
+        assertEquals("siya is greeted 2 time(s)", commandProcessor.execute());
 
     }
 
     @Test
     public void shouldReturnCounter(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.execute("greet siya");
-        commandProcessor.execute("greet dino");
-        commandProcessor.execute("greet siya");
+        CommandBuilder commandBuilder = new CommandBuilder("counter");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
 
-        assertEquals("2 user greeted", commandProcessor.execute("counter"));
+        commandProcessor.in.adding("siya");
+        commandProcessor.in.adding("dino");
+        commandProcessor.in.adding("siya");
+        commandProcessor.in.adding("dino");
+
+        assertEquals("2 user greeted", commandProcessor.execute());
 
     }
 
     @Test
     public void shouldClearUser(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.execute("greet siya");
-        commandProcessor.execute("greet dino");
-        commandProcessor.execute("greet siya");
+        CommandBuilder commandBuilder = new CommandBuilder("clear siya");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
+
+        commandProcessor.in.adding("ace");
+        commandProcessor.in.adding("siya");
+        commandProcessor.in.adding("dino");
 
 
-
-
-        assertEquals("siya Cleared", commandProcessor.execute("clear siya"));
+        assertEquals("siya Cleared", commandProcessor.execute());
 
     }
 
     @Test
     public void shouldClearAll(){
 
-        CommandProcessor commandProcessor = new CommandProcessor();
-        commandProcessor.execute("greet siya");
-        commandProcessor.execute("greet dino");
-        commandProcessor.execute("greet siya");
+        CommandBuilder commandBuilder = new CommandBuilder("clear");
+        CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
+
+        commandProcessor.in.adding("ace");
+        commandProcessor.in.adding("siya");
+        commandProcessor.in.adding("dino");
 
 
-
-
-        assertEquals("Cleared List", commandProcessor.execute("clear"));
+        assertEquals("Cleared List", commandProcessor.execute());
 
     }
 

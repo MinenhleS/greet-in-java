@@ -11,19 +11,20 @@ public class RunGreet {
         Scanner input = new Scanner(System.in);
         System.out.println(" \n ***************WELCOME TO OUR GREETINGAPP*************** \n \n ");
 
-        CommandProcessor commandProcessor = new CommandProcessor();
-
         while (true) {
 
                 System.out.println("\nEnter a command : ");
                 command = input.nextLine();
+
+                CommandBuilder commandBuilder = new CommandBuilder(command);
+                CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
 
             if (command.equalsIgnoreCase("exit")) {
                 System.out.println( " \n Goodbye have a nice day !!!");
                 break;
             }
 
-                System.out.println(commandProcessor.execute(command));
+                System.out.println(commandProcessor.execute());
 
         }
     }
