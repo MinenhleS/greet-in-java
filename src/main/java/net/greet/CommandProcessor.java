@@ -2,14 +2,14 @@ package net.greet;
 
 public class CommandProcessor {
     private final CommandBuilder commandBuilder;
-    Greet in;
-    //GreetDB in
+    Greetings in;
+
     GreetMessage put = new GreetMessage();
 
     CommandProcessor(CommandBuilder commandBuilder) {
         this.commandBuilder = commandBuilder;
         in = new Greet();
-        //in = new GreetDB();
+       // in = new GreetDB();
     }
 
     public String execute() {
