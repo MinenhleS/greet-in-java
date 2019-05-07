@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class RunGreet {
 
-
     public static void main(String[] args) {
+
+        Greet in  = new Greet();
+        // GreetDB in = new GreetDB();
 
         String command;
         Scanner input = new Scanner(System.in);
         System.out.println(" \n ***************WELCOME TO OUR GREETINGAPP*************** \n \n ");
-        Greet in  = new Greet();
-        // GreetDB in = new GreetDB();
 
         CommandProcessor commandProcessor = new CommandProcessor(in);
 
@@ -26,7 +26,6 @@ public class RunGreet {
             }
 
                 System.out.println(commandProcessor.execute(command));
-
 
 
         }
