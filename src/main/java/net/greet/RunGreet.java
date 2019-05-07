@@ -10,21 +10,24 @@ public class RunGreet {
         String command;
         Scanner input = new Scanner(System.in);
         System.out.println(" \n ***************WELCOME TO OUR GREETINGAPP*************** \n \n ");
+        Greet in  = new Greet();
+        // GreetDB in = new GreetDB();
+
+        CommandProcessor commandProcessor = new CommandProcessor(in);
 
         while (true) {
 
                 System.out.println("\nEnter a command : ");
                 command = input.nextLine();
 
-                CommandBuilder commandBuilder = new CommandBuilder(command);
-                CommandProcessor commandProcessor = new CommandProcessor(commandBuilder);
-
             if (command.equalsIgnoreCase("exit")) {
                 System.out.println( " \n Goodbye have a nice day !!!");
                 break;
             }
 
-                System.out.println(commandProcessor.execute());
+                System.out.println(commandProcessor.execute(command));
+
+
 
         }
     }

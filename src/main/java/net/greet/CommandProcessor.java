@@ -1,18 +1,19 @@
 package net.greet;
 
 public class CommandProcessor {
-    private final CommandBuilder commandBuilder;
-    Greetings in;
-
+    private final Greetings in;
+    //Greet in = new Greet();
+    //GreetDB in = new GreetDB();
     GreetMessage put = new GreetMessage();
 
-    CommandProcessor(CommandBuilder commandBuilder) {
-        this.commandBuilder = commandBuilder;
-        in = new Greet();
-       // in = new GreetDB();
+
+    CommandProcessor(Greetings in) {
+        this.in = in;
     }
 
-    public String execute() {
+    public String execute(String taker) {
+
+        CommandBuilder commandBuilder = new CommandBuilder(taker);
 
         try {
 
