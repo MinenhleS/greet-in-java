@@ -1,20 +1,25 @@
 package net.greet;
 
 import org.junit.Test;
-
+import org.mockito.Mockito;
+import java.util.HashMap;
+import java.util.Map;
 import static junit.framework.TestCase.assertEquals;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class CommandProcessorTests {
 
-    Greet put = new Greet();
-    //GreetDB put = new GreetDB();
+    //Greet put = new Greet();
+    GreetDB put = new GreetDB();
+    Greetings greetings = Mockito.mock(Greetings.class);
+
 
     @Test
     public void shouldReturnGreetCommand(){
 
-
-
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
+        //when().thenReturn();
 
         assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.execute("greet siya Tswana"));
 
@@ -24,7 +29,7 @@ public class CommandProcessorTests {
     public void shouldReturnGreetCommandWithDefault(){
 
 
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
         assertEquals("Sawubona, siya \n \nAdded user!", commandProcessor.execute("greet siya"));
 
@@ -32,79 +37,66 @@ public class CommandProcessorTests {
 
     @Test
     public void shouldReturnGreeted(){
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
+        Map<String, Integer> processor = new HashMap();
+        processor.put("siya", 2);
+        processor.put("dino", 3);
+        processor.put("minenhle", 5);
 
+        when(greetings.greeted()).thenReturn(processor);
 
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        assertEquals("The list of the greeted : {minenhle=5, dino=3, siya=2}", commandProcessor.execute("greeted"));
 
-        put.adding("ace");
-        put.adding("siya");
-        put.adding("dino");
-
-
-        assertEquals("The list of the greeted : {ace=1, dino=1, siya=1}", commandProcessor.execute("greeted"));
-
+        verify(greetings).greeted();
     }
 
     @Test
     public void shouldReturnGreetedUser(){
 
 
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
-        put.adding("ace");
-        put.adding("siya");
-        put.adding("dino");
-        put.adding("ace");
-        put.adding("siya");
+        when(greetings.greetedUsers("siya")).thenReturn("siya is greeted 1 time(s)");
 
 
-        assertEquals("siya is greeted 2 time(s)", commandProcessor.execute("greeted siya"));
-
+        assertEquals("siya is greeted 1 time(s)", commandProcessor.execute("greeted siya"));
+        verify(greetings).greetedUsers("siya");
     }
 
     @Test
     public void shouldReturnCounter(){
 
 
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
-        put.adding("siya");
-        put.adding("dino");
-        put.adding("siya");
-        put.adding("dino");
+        when(greetings.counter()).thenReturn(2);
 
         assertEquals("2 user greeted", commandProcessor.execute("counter"));
-
+        verify(greetings).counter();
     }
 
     @Test
     public void shouldClearUser(){
 
 
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
-        put.adding("ace");
-        put.adding("siya");
-        put.adding("dino");
-
+        when(greetings.clear("siya")).thenReturn("siya Cleared");
 
         assertEquals("siya Cleared", commandProcessor.execute("clear siya"));
-
+        verify(greetings).clear("siya");
     }
 
     @Test
     public void shouldClearAll(){
 
 
-        CommandProcessor commandProcessor = new CommandProcessor(put);
+        CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
-        put.adding("ace");
-        put.adding("siya");
-        put.adding("dino");
-
+        when(greetings.clear()).thenReturn("Cleared List");
 
         assertEquals("Cleared List", commandProcessor.execute("clear"));
-
+        verify(greetings).clear();
     }
 
 }
