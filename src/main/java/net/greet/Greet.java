@@ -39,6 +39,9 @@ public class Greet implements Greetings{
 
     @Override
     public String greetedUsers(String name) {
+            if(addUserMap.get(name) == null) {
+                return( name + " is greeted 0 time(s)" );
+            }
 
         return( name + " is greeted "+ addUserMap.get(name) + " time(s)" );
 
