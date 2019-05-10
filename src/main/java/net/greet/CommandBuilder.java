@@ -12,7 +12,7 @@ public class CommandBuilder {
         command = this.word[0];
 
         if(argumentCount() > 1) {
-            name = this.word[1];
+            name = this.word[1].toLowerCase();
         }
         else {
             name = "";
