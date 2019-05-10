@@ -19,7 +19,6 @@ public class CommandProcessorTests {
     public void shouldReturnGreetCommand(){
 
         CommandProcessor commandProcessor = new CommandProcessor(greetings);
-        //when().thenReturn();
 
         assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.execute("greet siya Tswana"));
 
