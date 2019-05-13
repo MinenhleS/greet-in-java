@@ -10,10 +10,10 @@ import static org.mockito.Mockito.*;
 
 public class CommandProcessorTests {
 
-    //Greet put = new Greet();
-    GreetDB put = new GreetDB();
-    Greetings greetings = Mockito.mock(Greetings.class);
+    // Greet put = new Greet();
+    // Greetings put = new GreetDB();
 
+    Greetings greetings = Mockito.mock(Greetings.class);
 
     @Test
     public void shouldReturnGreetCommand(){
@@ -21,7 +21,6 @@ public class CommandProcessorTests {
         CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
         assertEquals("Dumela, siya \n \nAdded user!", commandProcessor.execute("greet siya Tswana"));
-
     }
 
     @Test
@@ -56,7 +55,6 @@ public class CommandProcessorTests {
         CommandProcessor commandProcessor = new CommandProcessor(greetings);
 
         when(greetings.greetedUsers("siya")).thenReturn("siya is greeted 1 time(s)");
-
 
         assertEquals("siya is greeted 1 time(s)", commandProcessor.execute("greeted siya"));
         verify(greetings).greetedUsers("siya");
